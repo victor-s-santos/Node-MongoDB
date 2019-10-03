@@ -1,11 +1,11 @@
 const express = require('express');
+const router = require('./rotas/index');//chamando minhas rotas externamente
 //definindo rotas
+// const router = express.Router();
+// router.get('/', (req, res)=>{
+//     res.send('Olá Estranho!')
 
-const router = express.Router();
-router.get('/', (req, res)=>{
-    res.send('Olá Estranho!')
-
-});//rota inicial
+// });
 
 //fim das rotas
 
