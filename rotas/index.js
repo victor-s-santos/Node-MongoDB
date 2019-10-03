@@ -5,7 +5,9 @@ const router = express.Router();
 
 router.get('/', (req, res)=>{
     res.render('home', {
-        'nome': req.query.nome
+        'nome': req.query.nome,
+        'idade': req.query.idade,
+        'mostrar': true
     });
 });
 
