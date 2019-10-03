@@ -1,6 +1,14 @@
 const app = require('./app');
+const mongoose = require('mongoose');
 
 require('dotenv').config({path:'variables.env'});
+
+//db connection
+mongoose.connect(process.env.DATABASE);
+mongoose.Promise = global.Promise;
+mongoose.connection.on('error',(error)=>{
+    console.error(`Algo de errado não está certo ${error.message}`)
+})
 
 app.set('port', process.env.PORT || 7777);
 const server = app.listen(app.get('port'), ()=>{
