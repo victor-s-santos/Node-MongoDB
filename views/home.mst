@@ -21,3 +21,5 @@
 {{^aprender}}
 <p>Não há nada interessante para aprender!</p>
 {{/aprender}}
+
+{{!assim se faz comentários}}
