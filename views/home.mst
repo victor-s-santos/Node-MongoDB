@@ -1,1 +1,2 @@
 <h1>olá estranho</h1>
+<h2>Nome: {{ nome }}</h2>
