@@ -15,7 +15,11 @@ router.get('/', (req, res)=>{
             {linguagem:'javascript', framework:'react'},
             {linguagem:'ruby', framework:'on rails'},
             {linguagem:'python', framework:'flask'}
-        ]
+        ],
+        aprender:['machine learning', 'deep learning', 
+                'tensorflow', 'keras',
+                'pytorch', 'pandas'],
+        hello:'<h1>Olá estranho!</h1>'
     };
     res.render('home', itens);
 });

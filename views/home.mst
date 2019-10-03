@@ -1,4 +1,4 @@
-<h1>olá estranho</h1>
+{{{ hello }}}
 <h2>Nome: {{ nome }}</h2>
 {{#mostrar}}
 <h3>Idade: {{ idade }} anos</h3>
@@ -10,4 +10,11 @@
 {{#lp}}
     <li>{{linguagem}} - {{framework}}</li>
 {{/lp}}
+</ul>
+<hr/>
+
+<ul>
+{{#aprender}}
+<li>{{.}}</li>
+{{/aprender}}
 </ul>
