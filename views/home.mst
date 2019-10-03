@@ -1,3 +1,4 @@
+{{> header}}
 {{{ hello }}}
 <h2>Nome: {{ nome }}</h2>
 {{#mostrar}}
