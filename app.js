@@ -7,4 +7,8 @@ app.use('/', router);
 //app.use('/admin', adminRouter);
 
 app.use(express.json()); //não há mais necessidade de body-parser
+
+app.engine('mst', mustache());
+app.set('view engine', 'mst');
+app.set('views', __dirname + '/views');
 module.exports = app;
