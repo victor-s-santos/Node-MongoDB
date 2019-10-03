@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server.js",
+    "start": "nodemon ./server.js -e js, json, mst",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "Victor Santos Silva",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.1.0",
