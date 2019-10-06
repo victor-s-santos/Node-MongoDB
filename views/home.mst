@@ -22,5 +22,5 @@
 {{^aprender}}
 <p>Não há nada interessante para aprender!</p>
 {{/aprender}}
-<p>Usuário logado: {{userinfo.name}}
+<p>Usuário logado: {{userInfo.name}}
 {{!assim se faz comentários}}

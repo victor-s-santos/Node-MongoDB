@@ -1,6 +1,5 @@
 exports.userMiddleware = (req, res, next) => {
     let info = {name:'Victor', id:01};
-
     req.userInfo = info;
     next();
 };
