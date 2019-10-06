@@ -2,7 +2,12 @@
 <head>
     <title>{{titulo}}</title>
 </head>
-<h2>Cabeçalho</h2>
+{{#teste}}
+<h2>Cabeçalho: {{teste}}</h2>
+{{/teste}}
+{{^teste}}
+<h2>{{h.defaultTituloPagina}}</h2>
+{{/teste}}
 <h3>Bem parecido com as heranças de templates do django</h3>
 <hr>
 {{!não posso usar divs aqui}}

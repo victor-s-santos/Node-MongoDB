@@ -1,8 +1,16 @@
 const express = require('express');
 const mustache = require('mustache-express');
 const router = require('./rotas/index');//chamando minhas rotas externamente
+const helpers = require('./helpers');
 
 const app = express();//inicializando o servidor
+
+app.use((req, res, next)=>{
+    res.locals.h = helpers;
+    res.locals.teste = "apenas um teste";
+    next();
+});
+
 app.use('/', router);
 //app.use('/admin', adminRouter);
 

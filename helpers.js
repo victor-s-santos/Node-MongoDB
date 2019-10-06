@@ -1,0 +1,1 @@
+exports.defaultTituloPagina = "Título da Página Padrão";
