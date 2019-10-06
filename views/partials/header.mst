@@ -10,4 +10,9 @@
 {{/teste}}
 <h3>Bem parecido com as heranças de templates do django</h3>
 <hr>
+<ul>
+    {{#h.menu}}
+    <li><a href="{{slug}}">{{name}}</li>
+    {{/h.menu}}
+</ul>
 {{!não posso usar divs aqui}}
