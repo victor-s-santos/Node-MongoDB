@@ -12,9 +12,11 @@ app.use((req, res, next)=>{
 });
 
 app.use('/', router);
-//app.use('/admin', adminRouter);
+app.use(express.json()); 
 
-app.use(express.json()); //não há mais necessidade de body-parser
+app.use((req, res, next) => {
+    res.send('O endereço que você informou não foi encontrado!')
+})
 
 app.engine('mst', mustache(__dirname+'/views/partials', '.mst'));
 app.set('view engine', 'mst');
