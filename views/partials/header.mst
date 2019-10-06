@@ -8,7 +8,7 @@
 {{^teste}}
 <h2>{{h.defaultTituloPagina}}</h2>
 {{/teste}}
-<h3>Bem parecido com as heranças de templates do django</h3>
+<h3>Bem vinda(o) ao padrão MVC</h3>
 <hr/>
 <ul>
     {{#h.menu}}
