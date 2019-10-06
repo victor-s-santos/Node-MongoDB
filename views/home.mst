@@ -1,4 +1,5 @@
 {{> header}}
+<h1>{{titulo}}</h1>
 {{{ hello }}}
 <h2>Nome: {{ nome }}</h2>
 {{#mostrar}}
@@ -13,7 +14,6 @@
 {{/lp}}
 </ul>
 <hr/>
-
 <ul>
 {{#aprender}}
 <li>{{.}}</li>

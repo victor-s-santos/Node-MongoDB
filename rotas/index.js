@@ -19,7 +19,9 @@ router.get('/', (req, res)=>{
         aprender:['machine learning', 'deep learning', 
                 'tensorflow', 'keras',
                 'pytorch', 'pandas'],
-        hello:'<h1>Olá estranho!</h1>'
+        hello:'<h1>Olá estranho!</h1>',
+        titulo: 'Título da Página^^'
+
     };
     res.render('home', itens);
 });
