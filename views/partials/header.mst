@@ -9,10 +9,11 @@
 <h2>{{h.defaultTituloPagina}}</h2>
 {{/teste}}
 <h3>Bem parecido com as heranças de templates do django</h3>
-<hr>
+<hr/>
 <ul>
     {{#h.menu}}
-    <li><a href="{{slug}}">{{name}}</li>
+    <li><a href="{{slug}}">{{name}}</a></li>
     {{/h.menu}}
 </ul>
+<hr/>
 {{!não posso usar divs aqui}}
