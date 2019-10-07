@@ -6,7 +6,7 @@ exports.add = (req, res) =>{
 };
 
 exports.addAction = (req, res) => {
-    res.json(req.body);
+    res.json( req.body );
 
 }
 //requisicao get -> recebe como query
