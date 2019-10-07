@@ -16,4 +16,9 @@
     {{/h.menu}}
 </ul>
 <hr/>
-{{!não posso usar divs aqui}}
+
+{{#flashes}}
+    {{#success}}
+        <div>{{.}}</div>
+    {{/success}}
+{{/flashes}}
