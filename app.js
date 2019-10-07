@@ -10,10 +10,11 @@ app.use((req, res, next)=>{
     res.locals.teste = "apenas um teste";
     next();
 });
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 
 app.use('/', router);
-app.use(express.json());
-app.use(express.urlencoded({extended:true})); 
+ 
 
 app.use(errorHandler.notFound)
 // app.use((req, res, next) => {
