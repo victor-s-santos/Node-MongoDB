@@ -1,9 +1,10 @@
+/*
 exports.userMiddleware = (req, res, next) => {
     let info = {name:'Victor', id:01};
     req.userInfo = info;
     next();
 };
-
+*/
 exports.index = (req, res)=>{
     let itens = {
         'nome': req.query.nome,
