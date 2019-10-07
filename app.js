@@ -1,5 +1,10 @@
 const express = require('express');
 const mustache = require('mustache-express');
+//flash message
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const flash = require('express-flash');
+//
 const router = require('./rotas/index');//chamando minhas rotas externamente
 const helpers = require('./helpers');
 const errorHandler = require('./handlers/errorHandler')
@@ -12,6 +17,14 @@ app.use((req, res, next)=>{
 });
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+//habilitando cookie
+app.use(cookieParser(process.env.SECRET));
+//habilitando sessao
+app.use(session({
+    secret:process.env.SECRET,
+    resave:false,
+    saveUnitialized:false
+}));
 
 app.use('/', router);
  
