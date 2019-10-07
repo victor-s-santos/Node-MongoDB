@@ -10,4 +10,5 @@ router.get('/', homeController.index)
 router.get('/users/login', userController.login);
 router.get('/users/signup', userController.signup); 
 router.get('/post/add', postController.add);
+router.post('/post/add', postController.addAction);
 module.exports = router;
