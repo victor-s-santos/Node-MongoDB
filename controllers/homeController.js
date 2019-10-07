@@ -6,6 +6,7 @@ exports.userMiddleware = (req, res, next) => {
 };
 */
 exports.index = (req, res)=>{
+    /*
     let itens = {
         'nome': req.query.nome,
         'idade': req.query.idade,
@@ -26,5 +27,6 @@ exports.index = (req, res)=>{
         titulo: 'Título da Página^^'
 
     };
-    res.render('home', itens);
+    */
+    res.render('home');
 }

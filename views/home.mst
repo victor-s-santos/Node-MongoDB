@@ -1,26 +1,5 @@
 {{> header}}
 <h1>{{titulo}}</h1>
-{{{ hello }}}
-<h2>Nome: {{ nome }}</h2>
-{{#mostrar}}
-<h3>Idade: {{ idade }} anos</h3>
-{{/mostrar}}
-
-<h1>Linguagens de programação:</h1>
-<ul>
-    <li><h2>Linguagem - Framework</h2></li>
-{{#lp}}
-    <li>{{linguagem}} - {{framework}}</li>
-{{/lp}}
-</ul>
-<hr/>
-<ul>
-{{#aprender}}
-<li>{{.}}</li>
-{{/aprender}}
-</ul>
-{{^aprender}}
-<p>Não há nada interessante para aprender!</p>
-{{/aprender}}
-{{!<p>Usuário logado: {{userInfo.name}}}}
-{{!assim se faz comentários}}
+<body>
+    <div><h1>Lista das Postagens:</h1></div>
+</body>
