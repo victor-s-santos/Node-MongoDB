@@ -6,9 +6,10 @@ exports.add = (req, res) =>{
 };
 
 exports.addAction = async (req, res) => {
-    //res.json( req.body );
     const post = new Post(req.body);
     await post.save();
+    req.flash('success', 'Post enviado com sucesso!');
+
     res.redirect('/');
 };
 //requisicao get -> recebe como query
