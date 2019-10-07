@@ -6,5 +6,8 @@ exports.add = (req, res) =>{
 };
 
 exports.addAction = (req, res) => {
+    res.json(req.body);
 
 }
+//requisicao get -> recebe como query
+//requisicao post -> recebe como o corpo da requisicao pelo body
