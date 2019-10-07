@@ -5,11 +5,11 @@ exports.add = (req, res) =>{
     res.render('postAdd');
 };
 
-exports.addAction = (req, res) => {
+exports.addAction = async (req, res) => {
     //res.json( req.body );
     const post = new Post(req.body);
-    post.save();
-    req.redirect('/');
+    await post.save();
+    res.redirect('/');
 };
 //requisicao get -> recebe como query
 //requisicao post -> recebe como o corpo da requisicao pelo body
