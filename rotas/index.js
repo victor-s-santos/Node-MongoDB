@@ -11,4 +11,5 @@ router.get('/users/login', userController.login);
 router.get('/users/signup', userController.signup); 
 router.get('/post/add', postController.add);
 router.post('/post/add', postController.addAction);
+router.get('/post/:slug/edit', postController.edit);
 module.exports = router;

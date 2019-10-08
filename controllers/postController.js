@@ -19,5 +19,10 @@ exports.addAction = async (req, res) => {
 
     res.redirect('/');
 };
-//requisicao get -> recebe como query
-//requisicao post -> recebe como o corpo da requisicao pelo body
+
+exports.edit = async (req, res) => {
+    //1. Pegar as informacoes do dado post;
+    const post = await Post.findOne({slug:req.params.slug});//item especifido
+    //2. Carregar o formulario de edicao;
+    res.render('postEdit', {post:post});
+};

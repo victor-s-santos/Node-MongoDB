@@ -6,6 +6,7 @@
         {{#posts}}
         <h3><a href="/post/{{slug}}">{{title}}</a></h3>
         <p>{{body}}</p>
+        <h4><a href="/post/{{slug}}/edit"> [ editar ]</a></h4>
         <hr/>
         {{/posts}}
     </div>
