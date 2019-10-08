@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const slug = require('slug');
 const Post = mongoose.model('Post');
 
 exports.add = (req, res) =>{
@@ -28,6 +29,7 @@ exports.edit = async (req, res) => {
 };
 
 exports.editAction = async (req, res) => {
+    req.body.slug = slug(req.body.title, {lower:true});
     //1.Procurar o item especifico
     const post = await Post.findOneAndUpdate(
         {slug:req.params.slug},
