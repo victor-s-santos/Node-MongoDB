@@ -7,6 +7,7 @@ exports.add = (req, res) =>{
 };
 
 exports.addAction = async (req, res) => {
+    req.body.tags = req.body.tags.split(',');
     const post = new Post(req.body);
     try{
         await post.save();
