@@ -26,3 +26,22 @@ exports.edit = async (req, res) => {
     //2. Carregar o formulario de edicao;
     res.render('postEdit', {post:post});
 };
+
+exports.editAction = async (req, res) => {
+    //1.Procurar o item especifico
+    const post = await Post.findOneAndUpdate(
+        {slug:req.params.slug},
+         req.body,
+          {
+              new:true,//retorna novo item atualizado
+              runValidators:true//mantem as validacoes definidas no esquema do banco de dados
+              
+          }
+    );
+    req.flash('success', 'A postagem foi atualizada com sucesso!');
+    res.redirect('/');
+    //2.Pegar os dados a atualizar
+    //3.Mostrar msg de erro ou sucesso
+    //4.Redirecionar para a pagina anterior(home)
+
+};
