@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const slug = require('slug');
 const Post = mongoose.model('Post');
 
+exports.show = (req, res) => {
+    res.render('show');
+};
+
 exports.add = (req, res) =>{
     res.render('postAdd');
 };
@@ -50,3 +54,4 @@ exports.editAction = async (req, res) => {
     req.flash('success', 'A postagem foi atualizada com sucesso!');
     res.redirect('/');
 };
+

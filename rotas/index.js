@@ -16,4 +16,6 @@ router.post('/post/add', postController.addAction);
 //rota editar post
 router.get('/post/:slug/edit', postController.edit);
 router.post('/post/:slug/edit', postController.editAction);
+//rota visualizar post
+router.get('/post/:slug', postController.show);
 module.exports = router;
