@@ -1,15 +1,18 @@
 <html>
 <head>
     <title>{{titulo}}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
-{{#teste}}
-<h2>Cabeçalho: {{teste}}</h2>
-{{/teste}}
-{{^teste}}
-<h2>{{h.defaultTituloPagina}}</h2>
-{{/teste}}
-<h3>Bem vinda(o) ao padrão MVC</h3>
-<hr/>
+<body>
+<header>
+    {{#teste}}
+    <h2>Cabeçalho: {{teste}}</h2>
+    {{/teste}}
+    {{^teste}}
+    <h2>{{h.defaultTituloPagina}}</h2>
+    {{/teste}}
+    <h3>Bem vinda(o) ao padrão MVC</h3>
+</header>
 <ul>
     {{#h.menu}}
     <li><a href="{{slug}}">{{name}}</a></li>
@@ -19,12 +22,13 @@
 
 {{#flashes}}
     {{#success}}
-        <div>{{.}}</div>
+        <div class="messages">{{.}}</div>
     {{/success}}
     {{#info}}
-        <div>{{.}}</div>
+        <div class="messages">{{.}}</div>
     {{/info}}
     {{#error}}
-        <div>{{.}}</div>
+        <div class="messages">{{.}}</div>
     {{/error}}
+    </div>
 {{/flashes}}

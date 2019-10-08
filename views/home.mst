@@ -1,13 +1,10 @@
 {{> header}}
 <h1>{{titulo}}</h1>
-<body>
-    <div><h1>Lista das Postagens:</h1></div>
-    <div>
-        {{#posts}}
+    <h1>Lista das Postagens:</h1>
+{{#posts}}
+    <div class="post">
         <h3><a href="/post/{{slug}}">{{title}}</a></h3>
         <p>{{body}}</p>
-        <h4><a href="/post/{{slug}}/edit"> [ editar ]</a></h4>
-        <hr/>
-        {{/posts}}
+        <a href="/post/{{slug}}/edit"> [ editar ]</a>
     </div>
-</body>
+{{/posts}}
