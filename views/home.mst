@@ -4,7 +4,7 @@
     <div><h1>Lista das Postagens:</h1></div>
     <div>
         {{#posts}}
-        <h3>{{title}}</h3>
+        <h3><a href="/post/{{slug}}">{{title}}</a></h3>
         <p>{{body}}</p>
         <hr/>
         {{/posts}}
