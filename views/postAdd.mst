@@ -10,9 +10,11 @@
         <h2>Corpo:</h2>
         <textarea name="body"></textarea>
     </label>
+        <br/>
     <label>
-        Tags:
-
+        <h2>Tags:</h2><h3><i>Separar as Tags por vírgulas(,)</i><h3>
+        <input type="text" name="tags" />
     </label>
+        <br/>
         <input type="submit" value="Salvar" />
 </form>
