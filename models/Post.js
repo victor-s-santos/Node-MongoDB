@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const slug = require('slug');
+
 mongoose.Promise = global.Promise;
 
 const postSchema = new mongoose.Schema({
@@ -15,6 +17,10 @@ const postSchema = new mongoose.Schema({
     tags:[String]
 });
 
+
+postSchema.pre('save', function(next){
+    this.slug = slug(this.title);
+});
 module.exports = mongoose.model('Post', postSchema)
 /*
 Esquema do post:
