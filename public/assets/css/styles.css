@@ -34,7 +34,7 @@ ul {
 li {
   padding: 10px;
 }
-.warning {
+.messages {
   border: 2px solid #5555ff;
   background-color: #0000ff;
   color: #fff;

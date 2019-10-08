@@ -6,10 +6,12 @@
         <h2>Título:</h2>
         <input type="text" name="title" value="{{post.title}}"/>
     </label>
+    <br/>
     <label>
         <h2>Corpo:</h2>
         <textarea name="body">{{post.body}}</textarea>
     </label>
+    <br/>
     <label>
         <h2>Tags:</h2><h3><i>Separar as Tags por vírgulas(,)</i><h3>
         <input type="text" name="tags" value="{{post.tags}}"/>
