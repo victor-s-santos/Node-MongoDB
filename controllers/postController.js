@@ -2,8 +2,10 @@ const mongoose = require('mongoose');
 const slug = require('slug');
 const Post = mongoose.model('Post');
 
-exports.show = (req, res) => {
-    res.render('show');
+exports.show = async (req, res) => {
+    //igual ao edit
+    const post = await Post.findOne({slug:req.params.slug});
+    res.render('show', {post:post});
 };
 
 exports.add = (req, res) =>{
