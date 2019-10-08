@@ -20,12 +20,6 @@ const postSchema = new mongoose.Schema({
 
 postSchema.pre('save', function(next){
     this.slug = slug(this.title);
+    next();
 });
 module.exports = mongoose.model('Post', postSchema)
-/*
-Esquema do post:
-Título
-Corpo
-Tags
-Slug
-*/
