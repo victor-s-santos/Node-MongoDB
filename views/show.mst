@@ -2,5 +2,6 @@
 <div>
     <h1>{{post.title}}</h1>
     <article><h3>{{post.body}}</h3>
+    <hr />
     <span><i>{{post.tags}}</i><span>
 </div>
