@@ -30,20 +30,21 @@ exports.edit = async (req, res) => {
 
 exports.editAction = async (req, res) => {
     req.body.slug = slug(req.body.title, {lower:true});
-    //1.Procurar o item especifico
-    const post = await Post.findOneAndUpdate(
-        {slug:req.params.slug},
-         req.body,
-          {
-              new:true,//retorna novo item atualizado
-              runValidators:true//mantem as validacoes definidas no esquema do banco de dados
-              
-          }
-    );
+    try{
+        const post = await Post.findOneAndUpdate(
+            {slug:req.params.slug},
+            req.body,
+            {
+                new:true,//retorna novo item atualizado
+                runValidators:true//mantem as validacoes definidas no esquema do banco de dados
+                
+            }
+        );
+    }catch(error){
+        req.flash('error', `Erro ocorrido: ${error.message} `);
+        res.redirect('/post/'+req.params.slug+'/edit');
+        return;
+    };
     req.flash('success', 'A postagem foi atualizada com sucesso!');
     res.redirect('/');
-    //2.Pegar os dados a atualizar
-    //3.Mostrar msg de erro ou sucesso
-    //4.Redirecionar para a pagina anterior(home)
-
 };
