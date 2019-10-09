@@ -4,6 +4,8 @@ const homeController = require('../controllers/homeController');
 const userController = require('../controllers/userController');
 const postController = require('../controllers/postController');
 const router = express.Router();
+const imageMiddleware = require('../middlewares/imageMiddleware');
+
 //rota inicial
 router.get('/', homeController.index)
 
