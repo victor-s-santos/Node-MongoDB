@@ -6,6 +6,7 @@
         <h2>Título:</h2>
         <input type="text" name="title"/>
     </label>
+        <br />
     <label>
         <h2>Corpo:</h2>
         <textarea name="body"></textarea>
