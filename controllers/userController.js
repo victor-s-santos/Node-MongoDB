@@ -4,6 +4,19 @@ exports.login = (req, res) => {
     res.render('login');
 };
 
+exports.loginAction = (req, res) => {
+    const auth = User.authenticate();
+    auth(req.body.email, req.body.password, (error, result) => {
+        if(!result){
+            req.flash('error', 'Email ou senha errados!');
+            res.redirect('/users/login');
+            return;
+        }
+        req.flash('success', 'Login com sucesso!');
+        res.redirect('/');
+    });
+};
+
 exports.signup = (req, res) => {
     res.render('signup');
 };
