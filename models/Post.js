@@ -39,7 +39,8 @@ postSchema.pre('save', async function(next){
 postSchema.statics.filtraTags = function(){
     return this.aggregate([
         {$unwind:'$tags'},
-        {$group:{_id:'$tags', counter:{$sum:1}}}
+        {$group:{_id:'$tags', counter:{$sum:1}}},
+        {$sort:{counter:-1}}
     ]);
 }
 
