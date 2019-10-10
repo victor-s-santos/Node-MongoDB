@@ -5,9 +5,17 @@ exports.index = async (req, res)=>{
     let response = {
         titulo:'Bem vindo(a)',
         posts:[],
-        tags:[]
+        tags:[],
+        tag:''
     };
+    response.tag = req.query.t;
+
     const tags = await Post.filtraTags();
+    for(let i in tags){
+        if(tags[i]._id == response.tag){
+            tags[i].class = "selected";
+        }
+    }
     response.tags = tags;
 
     //console.log(tags);
