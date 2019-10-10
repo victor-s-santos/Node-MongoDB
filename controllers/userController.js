@@ -1,3 +1,5 @@
+const User = require('../models/User');
+
 exports.login = (req, res) => {
     res.render('login');
 };
@@ -7,5 +9,14 @@ exports.signup = (req, res) => {
 };
 
 exports.signupAction = (req, res) =>{
-    res.json(req.body);
+    const newUser = new User(req.body);
+    User.register(newUser, req.body.password, (error)=> {
+        if(error){
+            req.flash('error', 'Tente novamente mais tarde.')
+            res.redirect('/users/signup');
+            return;
+        }
+        req.flash('success', 'Registro realizado com sucesso.')
+        res.redirect('/users/login');
+    });
 };
