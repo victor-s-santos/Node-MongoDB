@@ -19,7 +19,7 @@ exports.index = async (req, res)=>{
     response.tags = tags;
 
     //console.log(tags);
-    const posts = await Post.find();
+    const posts = await Post.find({tags:response.tag});
     response.posts = posts;
     
     res.render('home', response);
