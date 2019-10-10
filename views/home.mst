@@ -4,7 +4,9 @@
 {{#posts}}
     <div class="post">
         <h3><a href="/post/{{slug}}">{{title}}</a></h3>
+        {{#photo}}
         <img src="/media/{{photo}}" />
+        {{/photo}}
         <p>{{body}}</p>
         <a href="/post/{{slug}}/edit"> [ editar ]</a>
     </div>
