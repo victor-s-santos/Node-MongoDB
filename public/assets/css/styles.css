@@ -51,7 +51,7 @@ li {
   overflow: hidden;
 }
 .post img {
-  max-width: 100%;
+  max-width: 90%;
 }
 form {
   margin: 20px;
