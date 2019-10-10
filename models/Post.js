@@ -35,4 +35,11 @@ postSchema.pre('save', async function(next){
 
     next();
 });
+
+postSchema.statics.filtraTags = function(){
+    return this.aggregate([
+        {$unwind:'$tags'}
+    ]);
+}
+
 module.exports = mongoose.model('Post', postSchema)
