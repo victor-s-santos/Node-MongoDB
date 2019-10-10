@@ -11,7 +11,8 @@ router.get('/', homeController.index)
 
 //rota usuarios
 router.get('/users/login', userController.login);
-router.get('/users/signup', userController.signup); 
+router.get('/users/signup', userController.signup);
+router.post('/users/signup',userController.signupAction); 
 //rota adicionar post
 router.get('/post/add', postController.add);
 router.post('/post/add', 

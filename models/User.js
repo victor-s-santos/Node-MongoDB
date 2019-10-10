@@ -5,8 +5,7 @@ mongoose.Promise = global.Promise;
 
 const userSchema = new mongoose.Schema({
     name:String,
-    email:String,
-    instituicao:String
+    email:String
 });
 
 userSchema.plugin(passportLocalMongoose, {usernameField:'email'});
