@@ -9,7 +9,7 @@ exports.index = async (req, res)=>{
         tag:''
     };
     response.tag = req.query.t;
-
+    const postFilter = (typeof response.tag != 'undefined') ? {tags:response.tag} : {};
     const tags = await Post.filtraTags();
     for(let i in tags){
         if(tags[i]._id == response.tag){
@@ -19,7 +19,7 @@ exports.index = async (req, res)=>{
     response.tags = tags;
 
     //console.log(tags);
-    const posts = await Post.find({tags:response.tag});
+    const posts = await Post.find(postFilter);
     response.posts = posts;
     
     res.render('home', response);
