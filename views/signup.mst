@@ -3,7 +3,12 @@
 
 <form method="POST">
     <label>
-        <h2>Usuário:</h2>
+        <h2>Nome:</h2>
+        <input type="name" name="name" />
+    </label>
+    <br />
+    <label>
+        <h2>Email:</h2>
         <input type="email" name="email" />
     </label>
     <br />
