@@ -1,6 +1,12 @@
 {{> header}}
 <h1>{{titulo}}</h1>
-    <h1>Lista das Postagens:</h1>
+<h2>Tags:</h2>
+<div class="tags">
+    {{#tags}}
+        <div class="tag">{{_id}}({{counter}})</div> 
+    {{/tags}}
+</div>
+    <h1>Postagens:</h1>
 {{#posts}}
     <div class="post">
         {{#photo}}

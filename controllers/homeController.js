@@ -10,7 +10,7 @@ exports.index = async (req, res)=>{
     const tags = await Post.filtraTags();
     response.tags = tags;
 
-    console.log(tags);
+    //console.log(tags);
     const posts = await Post.find();
     response.posts = posts;
     
