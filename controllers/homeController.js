@@ -14,10 +14,8 @@ exports.index = async (req, res)=>{
     const tagsPromise = Post.filtraTags();
     const postsPromise = Post.find(postFilter);
 
-    const result = await Promise.all([tagsPromise, postsPromise]);
-    const tags = result[0];
-    const posts = result[1];
-    
+    const [ tags, posts ] = await Promise.all([tagsPromise, postsPromise]);
+
     for(let i in tags){
         if(tags[i]._id == response.tag){
             tags[i].class = "selected";

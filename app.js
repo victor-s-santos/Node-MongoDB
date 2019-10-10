@@ -4,6 +4,10 @@ const mustache = require('mustache-express');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const flash = require('express-flash');
+
+//usuarios
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
 //
 const router = require('./rotas/index');//chamando minhas rotas externamente
 const helpers = require('./helpers');
@@ -35,6 +39,8 @@ app.use((req, res, next)=>{
     next();
 });
 
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', router);
  
