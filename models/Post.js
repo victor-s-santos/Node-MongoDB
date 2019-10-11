@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const slug = require('slug');
 
 mongoose.Promise = global.Promise;
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const postSchema = new mongoose.Schema({
     photo:String,
@@ -15,7 +16,8 @@ const postSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
-    tags:[String]
+    tags:[String],
+    author: ObjectId
 });
 
 

@@ -12,7 +12,7 @@
     <h2>{{h.defaultTituloPagina}}</h2>
     {{/teste}}
     {{#user}}
-    <h3>Olá, {{user.name}}. <a href="/users/logout">Sair</a></h3>
+    <h3>Olá, {{user.name}}!</h3>
     {{/user}}
 </header>
 <ul>
