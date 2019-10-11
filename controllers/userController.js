@@ -12,6 +12,8 @@ exports.loginAction = (req, res) => {
             res.redirect('/users/login');
             return;
         }
+
+        req.login(result, ()=>{});
         req.flash('success', 'Login com sucesso!');
         res.redirect('/');
     });
