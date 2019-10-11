@@ -43,7 +43,7 @@ app.use((req, res, next)=>{
     
     if(req.isAuthenticated()){
         //filtrando os menus
-        res.locals.h.menu = res.locals.h.menu.filter(i=>(i.guest || i.logged));
+        res.locals.h.menu = res.locals.h.menu.filter(i=>(i.logged));
     }else{
         res.locals.h.menu = res.locals.h.menu.filter(i=>i.guest);
     }
