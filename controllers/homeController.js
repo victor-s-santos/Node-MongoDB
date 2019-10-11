@@ -8,8 +8,7 @@ exports.index = async (req, res)=>{
         tags:[],
         tag:''
     };
-    //verificando o login
-    console.log(req.user)
+    
 
     response.tag = req.query.t;
     const postFilter = (typeof response.tag != 'undefined') ? {tags:response.tag} : {};

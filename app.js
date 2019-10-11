@@ -36,10 +36,18 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use((req, res, next)=>{
-    res.locals.h = helpers;
+    res.locals.h = { ...helpers};
     res.locals.teste = "apenas um teste";
     res.locals.flashes = req.flash();
     res.locals.user = req.user;//agora posso usar essa informacao no view
+    
+    if(req.isAuthenticated()){
+        //filtrando os menus
+        res.locals.h.menu = res.locals.h.menu.filter(i=>(i.guest || i.logged));
+    }else{
+        res.locals.h.menu = res.locals.h.menu.filter(i=>i.guest);
+    }
+
     next();
 });
 
