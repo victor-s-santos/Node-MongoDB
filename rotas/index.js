@@ -21,13 +21,15 @@ router.post('/users/signup',userController.signupAction);
 //rota adicionar post
 router.get('/post/add', authMiddleware.isLogged, postController.add);
 router.post('/post/add', 
+    authMiddleware.isLogged,
     imageMiddleware.upload,
     imageMiddleware.resize,    
     postController.addAction
 );
 //rota editar post
-router.get('/post/:slug/edit', postController.edit);
+router.get('/post/:slug/edit', authMiddleware.isLogged, postController.edit);
 router.post('/post/:slug/edit',
+    authMiddleware.isLogged,
     imageMiddleware.upload,
     imageMiddleware.resize,
     postController.editAction);
