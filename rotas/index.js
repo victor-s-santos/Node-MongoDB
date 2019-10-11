@@ -5,6 +5,7 @@ const userController = require('../controllers/userController');
 const postController = require('../controllers/postController');
 const router = express.Router();
 const imageMiddleware = require('../middlewares/imageMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 //rota inicial
 router.get('/', homeController.index)
@@ -18,7 +19,7 @@ router.get('/users/signup', userController.signup);
 router.post('/users/signup',userController.signupAction);
 
 //rota adicionar post
-router.get('/post/add', postController.add);
+router.get('/post/add', authMiddleware.isLogged, postController.add);
 router.post('/post/add', 
     imageMiddleware.upload,
     imageMiddleware.resize,    
