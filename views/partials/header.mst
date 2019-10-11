@@ -11,7 +11,9 @@
     {{^teste}}
     <h2>{{h.defaultTituloPagina}}</h2>
     {{/teste}}
-    <h3>Bem vinda(o) ao padrão MVC</h3>
+    {{#user}}
+    <h3>Olá, {{user.name}}. <a href="/users/logout">Sair</a></h3>
+    {{/user}}
 </header>
 <ul>
     {{#h.menu}}

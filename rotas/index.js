@@ -12,6 +12,7 @@ router.get('/', homeController.index)
 //rota login
 router.get('/users/login', userController.login);
 router.post('/users/login', userController.loginAction);
+router.get('/users/logout', userController.logout);
 //rota registro
 router.get('/users/signup', userController.signup);
 router.post('/users/signup',userController.signupAction);
