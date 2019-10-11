@@ -46,4 +46,8 @@ postSchema.statics.filtraTags = function(){
     ]);
 }
 
+postSchema.statics.findPosts = function(filters = {}){
+    return this.find(filters);
+}
+
 module.exports = mongoose.model('Post', postSchema)
