@@ -3,5 +3,6 @@ exports.menu = [
     {name:'Inicial', slug:'/'},
     {name:'Login', slug:'/users/login'},
     {name:'Cadastro', slug:'/users/signup'},
-    {name:'Adicionar Postagem', slug:'/post/add'}
+    {name:'Adicionar Postagem', slug:'/post/add'},
+    {name:'Sair', slug:'/users/logout'}
 ];
